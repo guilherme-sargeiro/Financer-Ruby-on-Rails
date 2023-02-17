@@ -22,22 +22,20 @@
                         <%= form_with model: User do |form| %>
                             <h5 class="card-title">Entrar</h5><br>
                             <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">E-mail:</span>
-                                </div>
-                                <input type="text" class="form-control" name="email" aria-label="" aria-describedby="basic-addon1">
+                                <%= form.label :email %>
+                                <%= form.email_field :email %>
                             </div>
                             <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">Senha:</span>
-                                </div>
-                                <input type="password" class="form-control" name="senha" aria-label="" aria-describedby="basic-addon1">
+                                <%= form.label :password %>
+                                <%= form.password_field :password %>
                             </div>
                             <br>
-                            <input type="submit" class="btn btn-success btn-md btn-block" value="Entrar"><br>
+                            <div class="actions">
+                                <%= form.submit "Logar"%>
+                            </div>
                             <a href="#">Esqueci minha senha</a><br>
                             <hr></hr><br>
-                            <a href="cadastrar.php" class="btn btn-success btn-md btn-block">Cadastrar</a>
+                            <a href="" class="btn btn-success btn-md btn-block">Cadastrar</a>
                         <% end %>
                     </div>
                 </div>
